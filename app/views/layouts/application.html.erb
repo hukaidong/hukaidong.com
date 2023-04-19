@@ -6,37 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
-    <div class="ui menu">
-
-      <a class="item" href="/">Home</a>
-      <a class="item" href="/about">About</a>
-      <a class="item" href="/contact">Contact</a>
-      <a class="item" href="/posts">Posts</a>
-
-      <div class="ui dropdown item">
-        Users
-        <i class="dropdown icon"></i>
-        <div class="menu">
-          <a class="item" href="/users">Profile</a>
-          <a class="item" href="/users/sign_in">Sign In</a>
-          <a class="item" href="/users/sign_up">Sign Up</a>
-        </div>
-      </div>
-
-      <div class="right menu">
-        <div class="item">
-          <div class="ui icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search link icon"></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render "layouts/navbar" %>
     <div class="ui container">
       <%= yield %>
     </div>
