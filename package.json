@@ -1,0 +1,11 @@
+{
+  "name": "hukaidong.com",
+  "version": "1.0.0",
+  "description": "personal webpage",
+  "main": "index.js",
+  "author": "Kaidong Hu <hukaidonghkd@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fomantic-ui": "^2.9.2"
+  }
+}

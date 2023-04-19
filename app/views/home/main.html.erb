@@ -1,0 +1,32 @@
+<div class="ui center aligned container">
+  <p>Current server time is <%= Time.now %></p>
+  <div class="ui file input">
+    <input type="file" data-direct-upload-url="<%= rails_direct_uploads_url %>" />
+  </div>
+</div>
+
+<h2>Display</h2>
+<div class="ui three column stackable grid">
+  <% 3.times do %>
+    <div class="column">
+      <div class="ui card">
+        <table class="ui right aligned table">
+          <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Points</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+          </tr>
+          <tr>
+          </tr>
+          <tr>
+          </tr>
+        </table>
+      </div>
+    </div>
+  <% end %>
+</div>
