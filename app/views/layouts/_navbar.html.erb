@@ -1,5 +1,5 @@
 <div class="ui stackable menu">
-  <%= link_to "Home", home_main_path, class: "item" %>
+  <%= link_to "Home", root_path, class: "item" %>
 
 
   <div class="ui dropdown item" data-controller="navmenu">
@@ -14,10 +14,19 @@
 
   <div class="right menu">
     <div class="item">
-      <div class="ui icon input">
-        <input type="text" placeholder="Search...">
-        <i class="search link icon"></i>
-      </div>
+      <%= form_with url: search_path,
+                    method: :get,
+                    class: 'ui icon input',
+                    id: 'navsearch-form' do |form| %>
+        <%= form.text_field :query, placeholder: "Search...", id: 'navsearch-content' %>
+        <!-- input type="text" placeholder="Search..." -->
+        <i class="search link icon"
+           id='navsearch-submit'
+           data-controller="navsearch"
+           data-action="click->navsearch#search"
+           data-submit-link-form-target="navsearch"
+        ></i>
+      <% end %>
     </div>
   </div>
 </div>
