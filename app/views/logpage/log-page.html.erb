@@ -1,0 +1,11 @@
+<%= stylesheet_link_tag "log-page" %>
+<h1> <%= @logclass %> log: </h1>
+<div class="log-container">
+  <div class="log-item">
+    <% if @content.present? %>
+      <%= @content.html_safe %>
+    <% else %>
+      <p> No log found. </p>
+    <% end %>
+  </div>
+</div>

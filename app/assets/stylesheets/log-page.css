@@ -1,0 +1,16 @@
+.log-container {
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: scroll;
+    height: 75vh;
+}
+
+.log-item {
+    white-space: pre-line;
+}

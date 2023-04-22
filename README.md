@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## System dependencies
 
-Things you may want to cover:
+* Ruby v2.3.1
+* Rails v4.2.6
+* PostgreSQL v12.14
+* Ansi Html Adapter v0.5 ( used for rendering logs )
 
-* Ruby version
+  ```sudo apt-get install aha```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
