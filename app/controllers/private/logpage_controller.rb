@@ -18,7 +18,7 @@ class Private::LogpageController < ApplicationController
 
   def fill_log_attrs(logclass, logfile)
     @logclass = logclass
-    @content = `aha --no-header -f #{Rails.root.join('log', logfile)}`.strip
+    @content = `aha --no-header -f #{Rails.root.join('log', logfile)}`
     @content = 'No log file found' if @content.empty?
   rescue Errno::ENOENT => e
     @content = e.full_message.gsub(/\e\[([;\d]+)?m/, '') # remove color codes
