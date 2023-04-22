@@ -1,7 +1,12 @@
+# frozen_string_literal: true
+require 'securerandom'
+
 Rails.application.routes.draw do
-  get 'logpage/production', as: 'production_log'
-  get 'logpage/development', as: 'development_log'
-  get 'logpage/test', as: 'test_log'
+  namespace :private do
+    get Random.alphanumeric(20), as: 'plog', to: 'logpage#production'
+    get Random.alphanumeric(20), as: 'dlog', to: 'logpage#development'
+    get Random.alphanumeric(20), as: 'tlog', to: 'logpage#test'
+  end
 
   get 'search', to: 'home#search'
 
