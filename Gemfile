@@ -44,6 +44,7 @@ gem "bootsnap", require: false
 
 gem 'aws-sdk-s3'
 gem 'jquery-rails'
+gem 'devise'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
