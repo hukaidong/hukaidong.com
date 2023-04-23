@@ -19,8 +19,6 @@ jobs:
       - run:
           name: Run the default task
           command: |
-            sudo apt-get update
-            sudo apt-get install -y google-chrome-stable
             gem install bundler -v 2.2.3
             bundle install
             bundle exec rake test:all
