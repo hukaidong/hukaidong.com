@@ -1,6 +1,12 @@
 class HomeController < ApplicationController
   def main; end
 
+  def about
+    base_path = Rails.root.join('public', 'uploads', 'kaidong_resume.pdf')
+    @my_resume_path = "/uploads/kaidong_resume.pdf" if File.exist?(base_path)
+  end
+
+
   def search
     # Get the search term from the query string
     @search_term = params[:query] || ''

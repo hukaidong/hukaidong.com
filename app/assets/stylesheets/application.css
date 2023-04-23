@@ -14,3 +14,14 @@
  *= require_self
  *= require semantic.min
  */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#in-screen-pdf {
+    width: 100%;
+    height: calc(100vh - 90px);
+}

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get Random.alphanumeric(20), as: 'tlog', to: 'logpage#test'
   end
 
+  get 'about', to: 'home#about'
   get 'search', to: 'home#search'
 
   devise_for :admins
