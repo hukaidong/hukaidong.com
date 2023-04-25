@@ -1,5 +1,14 @@
 <div class="ui stackable menu">
   <%= link_to "Home", root_path, class: "item" %>
+
+  <div class="ui dropdown item" data-controller="navmenu">
+    Applications
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <%= link_to "Coding Index Cards", apps_index_card_main_path, class: "item" %>
+    </div>
+  </div>
+
   <%= link_to "About", about_path, class: "item" %>
 
   <div class="ui dropdown item" data-controller="navmenu">

@@ -2,6 +2,9 @@
 require 'securerandom'
 
 Rails.application.routes.draw do
+  namespace :apps do
+    get 'index_card/main'
+  end
   namespace :private do
     get Random.alphanumeric(20), as: 'plog', to: 'logpage#production'
     get Random.alphanumeric(20), as: 'dlog', to: 'logpage#development'
