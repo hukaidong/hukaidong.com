@@ -11,14 +11,13 @@ class IndexCard
   end
 
   def plain_content
-    @plain_content ||= \
-      begin
-                               lines = @content['plain-content'].lines
-                               lines.map! { |x| x.split(':').first }
-                               lines.map!(&:strip)
-                               lines.reject!(&:empty?)
-                               lines.join("\n")
-                             end
+    @plain_content ||= begin
+                         lines = @content['plain-content'].lines
+                         lines.map! { |x| x.split(':').first }
+                         lines.map!(&:strip)
+                         lines.reject!(&:blank?)
+                         lines.join("\n")
+                       end
   end
 
   def content
