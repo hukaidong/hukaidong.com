@@ -21,4 +21,5 @@ jobs:
           command: |
             gem install bundler -v 2.2.3
             bundle install
+            bundle exec rake assets:precompile
             bundle exec rake test:all
