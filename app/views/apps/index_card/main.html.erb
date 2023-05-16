@@ -1,4 +1,5 @@
-<div data-controller="index-card-content">
+<div class="ui basic container segment" data-controller="index-card-content">
+  <h1> Index Card </h1>
   <div class="dropdown-container">
     <div class="ui selection dropdown" id='card-dropdown' data-index-card-content-target="columnSet">
       <input type="hidden" name="columns" value="3,three">
@@ -12,11 +13,10 @@
     </div>
   </div>
 
-  <h1> Index Card </h1>
   <div class="ui divider"></div>
   <div class="code-index-data" data-index-card-content-target="cards">
     <% @index_cards.each do |card| %>
-      <div class="ui segment">
+      <div class="ui container segment">
         <h3><%= card.title %></h3>
         <%= content_tag "pre", card.content %>
       </div>

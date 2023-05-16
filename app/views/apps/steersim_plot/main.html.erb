@@ -1,0 +1,18 @@
+<h1>Trajectory Plotter</h1>
+
+<div class="ui horizontal segments" data-controller="steersim-dropzone">
+  <div class="ui left attached center aligned segment">
+    <%= form_with(url: apps_steersim_plot_upload_path, html: { class: "ui placeholder segment dropzone", "data-steersim-dropzone-target" => "dropzone" }) do |form| %>
+    <% end %>
+  </div>
+
+  <div class="ui right attached center aligned segment">
+    <div class="ui center aligned segment" id="steersim-show">
+      <%= turbo_frame_tag "steersim_plot_show", "data-steersim-dropzone-target" => "plot" do %>
+        <div>Trajectory will be shown here.</div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%# stylesheet_link_tag "steersim-plot" %>

@@ -4,7 +4,12 @@ require 'securerandom'
 Rails.application.routes.draw do
   namespace :apps do
     get 'index_card/main'
+
+    get 'steersim_plot/main'
+    get 'steersim_plot/show'
+    post 'steersim_plot/upload'
   end
+
   namespace :private do
     get Random.alphanumeric(20), as: 'plog', to: 'logpage#production'
     get Random.alphanumeric(20), as: 'dlog', to: 'logpage#development'
