@@ -51,8 +51,9 @@ gem 'devise'
 
 # Use Sass to process CSS
 gem "sassc-rails"
+gem "sd_notify"
 
-source "http://gems.hukaidong.com" do
+source "https://gems.hukaidong.com" do
   gem "steersuite"
 end
 

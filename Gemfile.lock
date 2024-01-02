@@ -1,5 +1,5 @@
 GEM
-  remote: http://gems.hukaidong.com/
+  remote: https://gems.hukaidong.com/
   specs:
     steersuite (0.1.3)
       numo-gnuplot (~> 0.1)
@@ -256,6 +256,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    sd_notify (0.1.1)
     selenium-webdriver (4.9.1)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -322,6 +323,7 @@ DEPENDENCIES
   rails (~> 7.0.4, >= 7.0.4.3)
   rubocop
   sassc-rails
+  sd_notify
   selenium-webdriver
   sprockets-rails
   sqlite3
