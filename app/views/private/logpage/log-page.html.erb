@@ -2,6 +2,6 @@
 <h1> <%= @logclass %> log: </h1>
 <div class="log-container">
   <div class="log-item">
-    <%= @content.html_safe %>
+    <%= @content.lines.reverse.join.html_safe %>
   </div>
 </div>
